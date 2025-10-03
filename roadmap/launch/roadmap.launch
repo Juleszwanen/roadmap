@@ -6,6 +6,7 @@
 
     <rosparam command="load" file="$(arg config_file)"/>
     
+    <!-- JULES: Here the road/map_file_map_name parameter is overwritten, it is first set ing the config file -->
     <param name="roadmap/map_file_name" value="$(arg map_file_name)"/>    
     <param name="roadmap/map_package_name" value="$(arg map_package_name)"/>    
 

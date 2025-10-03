@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Robot Exchange Scenario: Reversed path from (15, 15) to (-5, -5) -->
+<way>
+  <nd x="15" y="15" theta="-2.356"/>
+  <nd x="10" y="10" theta="-2.356"/>
+  <nd x="5" y="5" theta="-2.356"/>
+  <nd x="0" y="0" theta="-2.356"/>
+  <lane type="road" width="4." two_way="1"/>
+</way>
