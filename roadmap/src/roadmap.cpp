@@ -14,16 +14,24 @@ Roadmap::Roadmap()
 
     // Subscribers
     waypoints_sub_ = nh_.subscribe(config_->external_waypoint_topic_, 1, &Roadmap::WaypointCallback, this); // Subscriber for waypoints (forwarded to the reader)
-    reset_sub_ = nh_.subscribe("/lmpcc/reset_environment", 1, &Roadmap::ResetCallback, this);
-    reverse_sub_ = nh_.subscribe("/roadmap/reverse", 1, &Roadmap::ReverseCallback, this);
+
+    /** @note Jules: you made this topic relative to allow namespacing */
+    reset_sub_ = nh_.subscribe("lmpcc/reset_environment", 1, &Roadmap::ResetCallback, this);
+
+    /** @note Jules: you made this topic relative to allow namespacing */
+    reverse_sub_ = nh_.subscribe("roadmap/reverse", 1, &Roadmap::ReverseCallback, this);
 
     // Debug: listens to rviz point for translating the map
     offset_sub_ = nh_.subscribe("roadmap/offset", 1, &Roadmap::OffsetCallback, this); // Subscriber for waypoints (forwarded to the reader)
 
     // Publishers
     map_pub_ = nh_.advertise<roadmap_msgs::RoadPolylineArray>("roadmap/road_polylines", 1);
+
+    /** @note Jules: you made this topic relative to allow namespacing */
     reference_pub_ = nh_.advertise<nav_msgs::Path>("roadmap/reference", 1);
-    goal_pub_ = nh_.advertise<geometry_msgs::PoseStamped>("/roadmap/goal", 1);
+
+    /** @note Jules: you made this topic relative to allow namespacing */
+    goal_pub_ = nh_.advertise<geometry_msgs::PoseStamped>("roadmap/goal", 1);
 
     // Then convert the read waypoints to splines
     spline_converter_.Initialize(nh_, config_.get());
