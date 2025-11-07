@@ -97,6 +97,7 @@ void Roadmap::ReverseCallback(const std_msgs::Empty &msg)
     pose_msg.header.frame_id = "map";
     goal_pub_.publish(pose_msg);
 
+    LOG_INFO("ROAD_MAP_NODE: Reversing the roadmap and Sending goals");
     ROADMAP_INFO("Roadmap reverse completed");
 }
 
