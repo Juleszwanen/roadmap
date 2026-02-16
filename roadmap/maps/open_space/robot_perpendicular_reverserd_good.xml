@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Robot 3.927 3 Perpendicular Path: Moving from left to right (increasing x direction) -->
+<way>
+  <nd x="10"  y="0"     theta="2.3562"/>
+  <nd x="8"   y="2"     theta="2.3562"/>
+  <nd x="6"   y="4"     theta="2.3562"/>
+  <nd x="4"   y="6"     theta="2.3562"/>
+  <nd x="2"   y="8"     theta="2.3562"/>
+  <nd x="0"   y="10"    theta="2.3562"/>
+  
+  <lane type="road" width="4." two_way="1"/>
+</way>

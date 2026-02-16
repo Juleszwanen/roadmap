@@ -2,8 +2,11 @@
 <!-- Robot Exchange Scenario: Path from (-5, -5) to (15, 15) -->
 <way>
   <nd x="0" y="0" theta="0.7854"/>
-  <nd x="5" y="5" theta="0.7854"/>
+  <nd x="2" y="2" theta="0.7854"/>
+  <nd x="4" y="4" theta="0.7854"/>
+  <nd x="6" y="6" theta="0.7854"/>
+  <nd x="8" y="8" theta="0.7854"/>
   <nd x="10" y="10" theta="0.7854"/>
-  <nd x="15" y="15" theta="0.7854"/>
+
   <lane type="road" width="4." two_way="1"/>
 </way>
